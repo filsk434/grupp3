@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example Code</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="./example-code.js"></script>
+  <style>
+    .javascript{
+         
+    }
+
+    .active{
+      /* border: solid 1px; */
+    }
+    .in-active{
+      border: none;
+      color: transparent;
+      text-shadow: 0 0 8px #000;
+    }
+
+    li{
+      font-weight: bold;
+    }
+    .hidden{
+      /* opacity: 0; */
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header class="bg-dark d-flex align-items-center py-2">
+    <a href="#" class="ms-5 text-decoration-none">
+        <img width="40px" src="./img/logo-prison-mike.png" alt="Prison Mike Logo" class="bi me-2">
+    </a>
+    <nav class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <a class="nav-link text-white" aria-current="page" href="#">PRISON MIKE TEAM</a>
+        <a class="nav-link text-white" href="#">Team</a>
+        <a class="nav-link fw-bold text-purple" href="#">Example code</a>
+    </nav>
+  </header>
+
+  <!-- Landing page content -->
+  <div class="bg-secondary py-5 mb-5 dementor-bg">
+    <div class="container text-light text-center py-5 text-shadow">
+        <h1 class="display-5 fw-bold">Prison Mike</h1>
+        <p class="lead text-mark-dark">How do you comfort a JavaScript bug? <br>You console it!</p>
+    </div>
+  </div>
+
+  <div class="container">
+      <div class="row align-items-md-stretch">
+          <div class="col-md-8">
+            <div class="h-100 p-5 bg-light border rounded-3">
+
+              <button class="button">PRESS ME</button>
+                              
+                <pre><code class="javascript func-delay">
+                  const delay = (ms) => 
+                    new Promise((resolve) => 
+                      setTimeout(resolve, ms));
+                </code></pre>
+              
+                <pre><code class="javascript func-compress">
+                  async function compress(input) {
+                    await delay(3000);
+                    return(input.slice(0, 3));
+                  }</code></pre>
+
+                <pre><code class="javascript func-encrypt">
+                  async function encrypt(input) {
+                    await delay(2000);
+                    return(input
+                      .split('')
+                      .reverse()
+                      .join(''));
+                  }</code></pre>
+
+                <pre><code class="javascript func-compEnc">
+                  async function compEnc(str){
+                    const a = await compress(str);
+                    const b = await encrypt(a);
+                    return b;
+                  }</code></pre>
+                <pre><code class="javascript run-script">
+                  compEnc('the secret key is 123543')
+                    .then((result) => {
+                      console.log(result);
+                    })</code></pre></span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="h-100 p-5 bg-light border rounded-3">
+
+              <p>Our code is an example of <strong>async</strong> 
+                JavaScript that perform asynchronous operations</p>
+
+              <p>Hoover over each codebox for a short description of the code</p>
+
+              <ul class="hidden">
+                <span class="javascript func-delay">
+                  <li>const delay</li>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Aperiam repellat, amet officiis non.</p>
+                </span>
+
+                <span class="javascript func-compress">
+                  <li>compress(input)</li>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Aperiam repellat, amet officiis non.</p>
+                </span>
+                
+                <span class="javascript func-encrypt">
+                  <li>encrypt(input)</li>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Aperiam repellat, amet officiis non.</p>
+                </span>
+
+                <span class="javascript func-compEnc">
+                  <li>compEnc(str)</li>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Aperiam repellat, amet officiis non.</p>
+                </span>
+
+                <span class="javascript run-script">
+                  <li>Runs the script</li>
+                  <p>calls the function <strong>compEnc</strong> then takes the results 
+                    and displays in the console</p>
+                </span>
+              
+          </div>
+      </div>
+  </div>   
+
+  <footer class="my-5 py-5 border-top">
+    <p class="small text-center text-muted">&copy; 2021 PRISON MIKE</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  
+</body>
+</html>
