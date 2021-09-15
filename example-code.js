@@ -10,53 +10,63 @@ window.addEventListener('load', (event) => {
     const funcCompEnc = document.querySelectorAll('.func-compEnc');
     const runScript = document.querySelectorAll('.run-script');
 
-    // 1) set the classList to in-active
+
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    /* ORDER OF OPERATION ON WEBPAGE
+    1 runScript
+    2 funcCompEnc
+    3 funcCompress
+    4 funcDelay
+    5 funcEncrypt
+    6 funcDelay
+    7 runScript
+    */
+    
+    // set all to blurred
     selector.forEach(element => {
-      element.classList.add('in-active');
+      element.classList.add('blurred');
     });
 
-    // 2) display the delay
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    activeOrInactive(funcDelay);
-
-    // 3) display the runScrpt
-    activeOrInactive(runScript)
-
-    async function compress(input) {
-      await delay(3000);
-      console.log(1);
-      return(input.slice(0, 3));
+    async function runProgram(){
+    // 1) display runScript
+    await activeOrInactive(runScript);
+    // 2) display funcCompEnc
+    await activeOrInactive(funcCompEnc);
+    // 3) display funcCompress
+    await activeOrInactive(funcCompress);
+    // 4) display funcDelay
+    await activeOrInactive(funcDelay);
+    // 5) display funcEncrypt
+    await activeOrInactive(funcEncrypt);
+    // 6) display funcDelay
+    await activeOrInactive(funcDelay);
+    // 7) display runScript
+    await activeOrInactive(runScript);
+    await delay(1000);
+    return;
     }
 
-    async function encrypt(input) {
-      await delay(2000);
-      console.log(2);
-      return(input.split('').reverse().join(''));
-    }
-
-    async function compEnc(str){
-      activeOrInactive(funcCompEnc) // 4) display the compEnc
-      const a = await compress(str);
-      activeOrInactive(funcCompress) // 5) display the compress
-      const b = await encrypt(a);
-  
-      activeOrInactive(funcEncrypt); // 6) display the encrypt
-      console.log(3);
-      return b;
-    }
-
-    compEnc('the secret key is 123543').then((result) => {
+    runProgram().then((result) => {
+      selector.forEach(element => {
+        element.classList.remove('blurred')
+        element.classList.remove('sharp')
+      })
       console.log(result);
     })
 
-    function activeOrInactive(nodelist){
-      nodelist.forEach(element => {
-        element.classList.remove('in-active');
-        element.classList.add('active');
+    async function activeOrInactive(nodelist){
+      await delay(1000);
+      selector.forEach(element => {
+        element.classList.add('blurred');
+        element.classList.remove('sharp');
       });
-    }
-
-   
+      nodelist.forEach(element => {
+        element.classList.remove('blurred');
+        element.classList.add('sharp');
+      });
+      return;
+    }   
 
   })
 
