@@ -17,12 +17,18 @@
     }
 
     .active{
-      border: solid 1px;
+      /* border: solid 1px; */
     }
     .in-active{
       border: none;
       color: transparent;
       text-shadow: 0 0 8px #000;
+    }
+
+    li{
+      font-weight: bold;
+    }
+    .hidden{
     }
     
   </style>
@@ -93,8 +99,41 @@
           <div class="col-md-4">
             <div class="h-100 p-5 bg-light border rounded-3">
 
-              
- 
+              <p>Our code is an example of <strong>async</strong> 
+                JavaScript that perform asynchronous operations</p>
+
+              <p>Hoover over each codebox for a short description of the code</p>
+
+              <ul class="hidden">
+                <span class="javascript func-delay">
+                  <li>const delay</li>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Aperiam repellat, amet officiis non.</p>
+                </span>
+
+                <span class="javascript func-compress">
+                  <li>compress(input)</li>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Aperiam repellat, amet officiis non.</p>
+                </span>
+                
+                <span class="javascript func-encrypt">
+                  <li>encrypt(input)</li>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Aperiam repellat, amet officiis non.</p>
+                </span>
+
+                <span class="javascript func-compEnc">
+                  <li>compEnc(str)</li>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Aperiam repellat, amet officiis non.</p>
+                </span>
+
+                <span class="javascript run-script">
+                  <li>Runs the script</li>
+                  <p>calls the function <strong>compEnc</strong> then takes the results 
+                    and displays in the console</p>
+                </span>
               
           </div>
       </div>

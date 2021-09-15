@@ -4,11 +4,11 @@ window.addEventListener('load', (event) => {
   const selector = document.querySelectorAll('.javascript')
 
   button.addEventListener("click", () =>{
-    const funcDelay = document.querySelector('.func-delay');
-    const funcCompress = document.querySelector('.func-compress');
-    const funcEncrypt = document.querySelector('.func-encrypt');
-    const funcCompEnc = document.querySelector('.func-compEnc');
-    const runScript = document.querySelector('.run-script');
+    const funcDelay = document.querySelectorAll('.func-delay');
+    const funcCompress = document.querySelectorAll('.func-compress');
+    const funcEncrypt = document.querySelectorAll('.func-encrypt');
+    const funcCompEnc = document.querySelectorAll('.func-compEnc');
+    const runScript = document.querySelectorAll('.run-script');
 
     // 1) set the classList to in-active
     selector.forEach(element => {
@@ -49,9 +49,11 @@ window.addEventListener('load', (event) => {
       console.log(result);
     })
 
-    function activeOrInactive(selector){
-      selector.classList.remove('in-active');
-      selector.classList.add('active');
+    function activeOrInactive(nodelist){
+      nodelist.forEach(element => {
+        element.classList.remove('in-active');
+        element.classList.add('active');
+      });
     }
 
   })
