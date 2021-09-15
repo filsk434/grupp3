@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap");
+.dementor-bg {
+  background-image: url("./img/Dementors.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.text-purple {
+  color: #ae7ddb;
+}
+
+.bg-purle {
+  background-color: #ae7ddb;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 1px black;
+}
+
+.text-mark-dark {
+  background-color: rgba(174, 125, 219, 0.8);
+  display: inline;
+}
+/*# sourceMappingURL=style.css.map */
