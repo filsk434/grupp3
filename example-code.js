@@ -29,19 +29,12 @@ window.addEventListener('load', (event) => {
     });
 
     async function runProgram(){
-    // 1) display runScript
     await activeOrInactive(runScript);
-    // 2) display funcCompEnc
     await activeOrInactive(funcCompEnc);
-    // 3) display funcCompress
     await activeOrInactive(funcCompress);
-    // 4) display funcDelay
     await activeOrInactive(funcDelay);
-    // 5) display funcEncrypt
     await activeOrInactive(funcEncrypt);
-    // 6) display funcDelay
     await activeOrInactive(funcDelay);
-    // 7) display runScript
     await activeOrInactive(runScript);
     await delay(1000);
     return;
