@@ -13,6 +13,9 @@ $whtie: (#ffffff);
 }
 .text-purple {
     color: $purple;
+    &:hover {
+      color:#c5abdd;
+    }
 }
 .bg-office-mike {
     
@@ -21,6 +24,16 @@ $whtie: (#ffffff);
      background-image: url('https://styledme.com/wp-content/uploads/2021/03/plain-background-white-color-wall-minimalist-microsoft-teams-video-calls-backgrounds.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+
+nav {
+  .nav-link {
+    &:hover {
+      color:#b48bdb;
+    }
+  }
 }
 
 body {
@@ -218,11 +231,6 @@ p {
     margin-top: 0px;
   }
   }
-
-  
-.text-purple {
-  color: #ae7ddb;
-}
 
 .bg-purle {
   background-color: #ae7ddb;

@@ -32,12 +32,18 @@
     .hidden{
       /* opacity: 0; */
     }
+
+    @media only screen and (max-width: 600px) {
+      .button {
+        display: none;
+      }
+    }
     
   </style>
 </head>
 <body>
 
-  <header class="bg-dark d-flex align-items-center py-2">
+  <header class="bg-dark d-flex align-items-center py-2 flex-wrap">
     <a href="../landingpage/index.html" class="ms-5 text-decoration-none">
         <img width="40px" src="../img/mike.png" alt="Prison Mike Logo" class="bi me-2">
     </a>
