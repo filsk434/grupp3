@@ -1,7 +1,8 @@
-window.addEventListener('load', (event) => {
+window.addEventListener('load', () => {
 
   const button = document.querySelector('.button');
   const selector = document.querySelectorAll('.javascript')
+  const result = document.querySelector('.result');
 
   button.addEventListener("click", () =>{
     const funcDelay = document.querySelectorAll('.func-delay');
@@ -30,26 +31,20 @@ window.addEventListener('load', (event) => {
 
     async function runProgram(){
     await activeOrInactive(runScript);
-    await activeOrInactive(funcCompEnc);
+    await activeOrInactive(funcCompEnc, 3000);
     await activeOrInactive(funcCompress);
     await activeOrInactive(funcDelay);
-    await activeOrInactive(funcEncrypt);
+    await activeOrInactive(funcCompEnc);
+    await activeOrInactive(funcDelay);
+    await activeOrInactive(funcEncrypt, 2000);
     await activeOrInactive(funcDelay);
     await activeOrInactive(runScript);
-    await delay(1000);
+    await delay(3000);
     return;
     }
-
-    runProgram().then((result) => {
-      selector.forEach(element => {
-        element.classList.remove('blurred')
-        element.classList.remove('sharp')
-      })
-      console.log(result);
-    })
-
-    async function activeOrInactive(nodelist){
-      await delay(1000);
+    
+    async function activeOrInactive(nodelist, ms=0){
+      await delay(ms + 4000);
       selector.forEach(element => {
         element.classList.add('blurred');
         element.classList.remove('sharp');
@@ -60,6 +55,15 @@ window.addEventListener('load', (event) => {
       });
       return;
     }   
+
+    runProgram().then(() => {
+      selector.forEach(element => {
+        element.classList.remove('blurred')
+        element.classList.remove('sharp')
+      })
+      alert('console.log(result) => eht');
+    })
+
 
   })
 
