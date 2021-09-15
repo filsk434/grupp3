@@ -13,8 +13,7 @@
   <script src="./example-code.js"></script>
   <style>
     .javascript{
-      position: relative;
-      /* hur flyttar jag texten mer till vänster?? */      
+         
     }
 
     .active{
@@ -35,9 +34,9 @@
         <img width="40px" src="./img/logo-prison-mike.png" alt="Prison Mike Logo" class="bi me-2">
     </a>
     <nav class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <a class="nav-link fw-bold text-purple " aria-current="page" href="#">PRISON MIKE TEAM</a>
+        <a class="nav-link text-white" aria-current="page" href="#">PRISON MIKE TEAM</a>
         <a class="nav-link text-white" href="#">Team</a>
-        <a class="nav-link text-white" href="#">Example code</a>
+        <a class="nav-link fw-bold text-purple" href="#">Example code</a>
     </nav>
   </header>
 
@@ -51,44 +50,52 @@
 
   <div class="container">
       <div class="row align-items-md-stretch">
-          <div class="col-md-12">
-          <div class="h-100 p-5 bg-light border rounded-3">
+          <div class="col-md-8">
+            <div class="h-100 p-5 bg-light border rounded-3">
 
-            <button class="button">PRESS ME</button>
-                            
-              <pre><code class="javascript func-delay">
-                const delay = (ms) => 
-                  new Promise((resolve) => 
-                    setTimeout(resolve, ms));
-              </code></pre>
-            
-              <pre><code class="javascript func-compress">
-                async function compress(input) {
-                  await delay(3000);
-                  return(input.slice(0, 3));
-                }</code></pre>
+              <button class="button">PRESS ME</button>
+                              
+                <pre><code class="javascript func-delay">
+                  const delay = (ms) => 
+                    new Promise((resolve) => 
+                      setTimeout(resolve, ms));
+                </code></pre>
+              
+                <pre><code class="javascript func-compress">
+                  async function compress(input) {
+                    await delay(3000);
+                    return(input.slice(0, 3));
+                  }</code></pre>
 
-              <pre><code class="javascript func-encrypt">
-                async function encrypt(input) {
-                  await delay(2000);
-                  return(input
-                    .split('')
-                    .reverse()
-                    .join(''));
-                }</code></pre>
+                <pre><code class="javascript func-encrypt">
+                  async function encrypt(input) {
+                    await delay(2000);
+                    return(input
+                      .split('')
+                      .reverse()
+                      .join(''));
+                  }</code></pre>
 
-              <pre><code class="javascript func-compEnc">
-                async function compEnc(str){
-                  const a = await compress(str);
-                  const b = await encrypt(a);
-                  return b;
-                }</code></pre>
-              <pre><code class="javascript run-script">
-                compEnc('the secret key is 123543')
-                  .then((result) => {
-                    console.log(result);
-                  })</code></pre></span>
+                <pre><code class="javascript func-compEnc">
+                  async function compEnc(str){
+                    const a = await compress(str);
+                    const b = await encrypt(a);
+                    return b;
+                  }</code></pre>
+                <pre><code class="javascript run-script">
+                  compEnc('the secret key is 123543')
+                    .then((result) => {
+                      console.log(result);
+                    })</code></pre></span>
+            </div>
           </div>
+
+          <div class="col-md-4">
+            <div class="h-100 p-5 bg-light border rounded-3">
+
+              
+ 
+              
           </div>
       </div>
   </div>   
