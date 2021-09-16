@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 testmalin
+=======
+filip branch
+>>>>>>> cd6c8595ad070a26412ead798fb3199d7e76b703
