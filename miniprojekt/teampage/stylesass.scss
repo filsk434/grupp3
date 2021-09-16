@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-$colors: (rgb(174,125,219),#212529,#ffffff);
 $purple: rgb(174,125,219);
 $black: (#212529);
 $whtie: (#ffffff);
@@ -14,6 +13,9 @@ $whtie: (#ffffff);
 .text-purple {
     color: $purple;
     &:hover {
+      color:#c5abdd;
+    }
+    &:focus {
       color:#c5abdd;
     }
 }

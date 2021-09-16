@@ -16,7 +16,14 @@ body {
   }
 .text-purple {
     color: rgb(174, 125, 219);
+    &:hover {
+      color:#c5abdd;
+    }
+    &:focus {
+      color:#c5abdd;
+    }
 }
+
 .bg-purle {
     background-color: rgb(174, 125, 219);
 }
