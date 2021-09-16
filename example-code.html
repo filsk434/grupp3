@@ -14,6 +14,12 @@
   <link rel="stylesheet" href="../landingpage/style.css">
   <style>
 
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     .sharp{
     }
     .blurred{
@@ -21,10 +27,32 @@
       text-shadow: 0 0 8px #000;
     }
 
+    .console{
+      border: rgba(174, 125, 219, 0.8) solid;
+      min-height: 12rem;
+      margin-bottom: 20px;
+    }
+    .console h5{
+      padding-left: 30px;
+    }
+    .console p{
+      margin: 0 0 1px 30px;
+    }
+
+    .console-hide{
+      visibility: hidden;
+      display: none;
+    }
+    .console-show{
+      visibility: visible;
+      display: block;
+    }
+
     li{
       font-weight: bold;
     }
-    button{
+    .button{
+      padding: 2px;
       font-size: 1.2rem;
       font-weight: bold;
       border: 1px solid transparent;
@@ -32,9 +60,12 @@
       background-color: rgba(174, 125, 219, 0.8);
       transition: background-color 0.5s;
     }
-    button:hover{
+    .button:hover{
       transition: background-color 0.5s;
       background-color: #212529;
+    }
+    .button:active{
+      transform: scale(0.95);
     }
     
   </style>
@@ -65,55 +96,65 @@
 
   <div class="container">
       <div class="row align-items-md-stretch">
-          <div class="col-md-8">
+          <div class="col-md-6">
             <div class="h-100 p-5 bg-light border rounded-3">
 
-                              
-                <pre><code class="javascript func-delay">
-                  const delay = (ms) => 
-                    new Promise((resolve) => 
-                      setTimeout(resolve, ms));
-                </code></pre>
-              
-                <pre><code class="javascript func-compress">
-                  async function compress(input) {
-                    await delay(3000);
-                    return(input.slice(0, 3));
-                  }</code></pre>
+  <!-- Code is indented to the left so whitespace is removed in code -->
+  <div>
+    <h3>example code</h3>
+    <div class="console rounded-3 console-hide">
+      <h5>console</h5>
+    </div>
+  </div>
+  
+  <pre><code class="javascript func-delay border rounded-3">
+    const delay = (ms) => 
+      new Promise((resolve) => 
+        setTimeout(resolve, ms));
+  </code></pre>
 
-                <pre><code class="javascript func-encrypt">
-                  async function encrypt(input) {
-                    await delay(2000);
-                    return(input
-                      .split('')
-                      .reverse()
-                      .join(''));
-                  }</code></pre>
+  <pre><code class="javascript func-compress border rounded-3">
+    async function compress(input) {
+      await delay(3000);
+      console.log('2) compress');
+      return(input.slice(0, 3));
+    }</code></pre>
 
-                <pre><code class="javascript func-compEnc">
-                  async function runProgram(str){
-                    const a = await compress(str);
-                    const b = await encrypt(a);
-                    return b;
-                  }</code></pre>
-                <pre><code class="javascript run-script">
-                  runProgram('the secret key is 123543')
-                    .then((result) => {
-                      console.log(result);
-                    })</code></pre>
+  <pre><code class="javascript func-encrypt border rounded-3">
+    async function encrypt(input) {
+      await delay(2000);
+      console.log('3) encrypt');
+      return(input
+        .split('').reverse().join(''));
+    }</code></pre>
+
+  <pre><code class="javascript func-compEnc border rounded-3">
+    async function runProgram(str){
+      console.log('1a) runProgram');
+      const a = await compress(str);
+      console.log('1b) runProgram');
+      const b = await encrypt(a);
+      console.log('1c) runProgram');
+      return b;
+    }</code></pre>
+  <pre><code class="javascript run-script border rounded-3">
+    runProgram('the secret key is 123543')
+      .then((result) => {
+        console.log(result);
+      })</code></pre>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="h-100 p-5 bg-light border rounded-3">
 
               <h3>async & await</h3>
               <p>Our code is an example of <strong>async</strong> 
                 JavaScript that perform asynchronous operations.</p>
 
-              <p>Press the button to run the program.</p>
+              <p class="non-mobile">Press the button to run the program.</p>
 
-              <p>Note that 4 seconds are added to all steps!</p>
+              <p class="non-mobile">Note that 4 seconds are added to all steps!</p>
 
               <button class="button text-mark-dark text-light text-center text-shadow">PRESS ME</button>
               
@@ -123,8 +164,6 @@
                   <li>runProgram('....')</li>
                   <p>First calls the function <strong>runProgram</strong> with the string 'the secret key is 123543'</p>
                   <p>After runProgram(str) is done; takes the results and displays in the console</p>
-
-                  <div class="result"></div>
                 </span>
 
                 <span class="javascript func-compEnc">
@@ -147,7 +186,7 @@
 
                 <span class="javascript func-delay">
                   <li>const delay</li>
-                  <p>Takes a parameter of millieseconds and activates a setTimeout</p>
+                  <p>Takes a parameter of milliseconds and activates a setTimeout</p>
                 </span>
                 
               
