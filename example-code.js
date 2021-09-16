@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
       element.classList.add('blurred');
     });
 
-    const standardDelay = 0;
+    const standardDelay = 4000;
 
     async function start(){
     await activeOrInactive(runProgram, -standardDelay);
@@ -81,7 +81,7 @@ window.addEventListener('load', () => {
         element.classList.remove('blurred')
         element.classList.remove('sharp')
       })
-      console.innerHTML += 'eht';
+      console.innerHTML += '<p>Encrypted text string: eht</p>';
       button.disabled = false;
     })
 
