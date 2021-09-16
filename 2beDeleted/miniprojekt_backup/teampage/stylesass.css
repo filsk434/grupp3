@@ -8,24 +8,12 @@
   color: #ae7ddb;
 }
 
-.text-purple:hover {
-  color: #c5abdd;
-}
-
-.text-purple:focus {
-  color: #c5abdd;
-}
-
 .bg-office-mike {
   /* background-image: url("http://1.bp.blogspot.com/-vu2L6n4LyZY/UbbnNcFRbLI/AAAAAAAAJ58/ma5QGXvxGEo/s1600/pro_team.jpg");
      background-image: url(img/coffee.png);*/
   background-image: url("https://styledme.com/wp-content/uploads/2021/03/plain-background-white-color-wall-minimalist-microsoft-teams-video-calls-backgrounds.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-nav .nav-link:hover {
-  color: #b48bdb;
 }
 
 body {
@@ -230,6 +218,10 @@ p {
   to {
     margin-top: 0px;
   }
+}
+
+.text-purple {
+  color: #ae7ddb;
 }
 
 .bg-purle {

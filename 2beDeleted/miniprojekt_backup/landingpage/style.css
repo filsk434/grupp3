@@ -1,30 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-body {
-  font-family: Inter;
-}
-
 .dementor-bg {
   background-image: url("./img/Dementors.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.hacker-bg {
-  background-image: url("../img/hacker.png");
-  background-size: cover;
-  background-position: center;
-}
-
 .text-purple {
   color: #ae7ddb;
-}
-
-.text-purple:hover {
-  color: #c5abdd;
-}
-
-.text-purple:focus {
-  color: #c5abdd;
 }
 
 .bg-purle {
